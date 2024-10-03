@@ -1,0 +1,646 @@
+/* Root styling with improved font and color scheme */
+:root {
+  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  font-weight: 400;
+  
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Anchor (link) styling */
+a {
+  font-weight: 500 bold;
+  color: #ffffff;
+  text-decoration: none; /* Remove underline */
+  scroll-margin-right: 100px ;
+  max-width: fit-content;
+}
+a:hover {
+  color: #2336af;
+
+}
+
+/* Body reset and layout */
+body {
+  margin: 0;
+  display: grid;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: #f0f2f5; /* Softer background for better contrast */
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Headings styling */
+h1 {
+  font-size: 4rem;
+  color: #333; /* Dark color for visibility */
+  text-align: center;
+  margin-top: 20px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  display: block; /* Ensure it's displayed */
+  margin: 20px 0;
+  padding: 0;
+}
+
+h2 {
+  color: #222; /* Darker color for better visibility */
+  margin-bottom: 25px;
+  font-size: 2rem;
+}
+
+h3 {
+  color: #125cac; /* Slightly darker blue for contrast */
+  margin: 20px 0;
+  font-size: 1.5rem;
+}
+
+/* Paragraphs */
+p {
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+/* Button styles */
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.7em 1.5em;
+  font-size: 1.1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  color: white;
+  cursor: pointer;
+  transition: border-color 0.3s, background-color 0.3s;
+
+}
+button:hover {
+  border-color: #646cff;
+  background-color: #2a2a2a;
+  transform: translateY(2px);
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+/* Navigation bar styling */
+nav {
+  display:inline-block;
+  margin: 10px ;
+  padding: 12px 25px;
+  background-color: #2583e9; /* Matching button color */
+  border-radius: 8px; /* Rounded button corners */
+  text-decoration: none;
+  font-weight: 600; /* Bold font for buttons */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  font: white bold;
+  
+ }
+
+
+/* Button group */
+.button-group {
+  margin-top: 20px;
+}
+
+/* Individual button links */
+.button {
+  display: inline-block;
+  margin-right: 10px;
+  padding: 12px 25px;
+  background-color: #007BFF;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 1.1em;
+  transition: background-color 0.3s;
+ 
+  transform: translateY(-3px); 
+}
+.button:hover {
+  background-color: #a0c9f5;
+  transform: translateY(-2px);
+}
+
+/* Section styling */
+section {
+  padding: 80px 20px;
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+}
+
+/* Service item layout and styling */
+.services-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.service-item {
+  background-color: #ffffff; /* White background for each project */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  margin: 20px 0; /* Space between projects */
+  padding: 20px; /* Padding inside each project */
+  transition: transform 0.3s, box-shadow 0.3s; /* Smooth transitions */
+}
+
+.service-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* Image styling */
+.service-item img {
+  max-width: 50%; /* Slightly smaller for a sleeker look */
+  height: auto;
+  border-radius: 10px;
+  margin: 0 auto;
+  display: block;
+}
+
+/* Improved button styles */
+button {
+  padding: 12px 25px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  font-size: 1rem;
+}
+
+button:hover {
+  background-color: #0056b3;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Subtle shadow on hover */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .services-content {
+    padding: 20px;
+  }
+
+  .service-item {
+    margin: 25px 0;
+    padding: 20px;
+  }
+
+  .service-item img {
+    max-width: 75%;
+  }
+}
+
+@media (max-width: 480px) {
+  h2 {
+    font-size: 1.8rem ;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  .service-item {
+    padding: 15px;
+    margin: 20px 0;
+  }
+
+  .service-item img {
+    max-width: 80%;
+  }
+
+  .button {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Light mode adjustments */
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a{
+    color:#0056b3;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+    color: #007BFF;
+  }
+  button:hover {
+    background-color: #e0e0e0;
+    border-color: #007BFF;
+  }
+  
+}
+/* About Section Styling */
+#about {
+  padding: 80px 20px;
+  background-color: white; /* Light background for the about section */
+  text-align: center; /* Center content */
+  margin: 40px 0;
+}
+
+.about-content {
+  max-width: 1100px; /* Restrict the width for readability */
+  margin: 0 auto;
+  padding: 40px;
+  background-color:1px solid #e0e0e0; /* White background for the content area */
+  border-radius: 10px;
+  box-shadow:  0 6px 15px rgba(0, 0, 0, 0.1);/* Soft shadow for depth */
+  
+}
+
+.about-content h2 {
+  font-size: 2.5rem; /* Larger heading size */
+  color: #333; /* Darker color for contrast */
+  margin-bottom: 20px;
+}
+
+.about-photo {
+  width: 250px; /* Adjust the size of the image */
+  height: 250px;
+  border-radius: 80%; /* Circular image */
+  object-fit: cover;
+  margin: 20px 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Shadow around the image */
+}
+
+.about-content p {
+  color: #555; /* Soft text color */
+  font-size: 1.1rem; /* Readable font size */
+  line-height: 1.8; /* Good line spacing */
+  margin-bottom: 20px;
+}
+
+.resume-link {
+  display: inline-block;
+  background-color: #007BFF; /* Blue button */
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  font-weight: 600;
+}
+
+.resume-link:hover {
+  background-color: #c5dcf4; /* Darker blue on hover */
+  transform: translateY(-2px);
+}
+/* Home Section Styling */
+/* Home Section Styling (updated to match Services style) */
+#home {
+  padding: 80px 20px;
+  background-color: white; /* Matching background color of services */
+  text-align: center; /* Center content */
+  margin-bottom: 40px; /* Space below the section */
+}
+
+.home-content {
+  max-width: 1100px; /* Restrict width similar to services */
+  margin: 0 auto; /* Center the content */
+  background-color: #fff; /* White background like service items */
+  padding: 40px; /* Padding inside the content area */
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+.home-content h2 {
+  font-size: 2.5rem; /* Larger heading size */
+  color: #333; /* Darker color for contrast */
+  margin-bottom: 20px; /* Space below the heading */
+  font-weight: 700; /* Bold font */
+}
+
+.home-content p {
+  font-size: 1.2rem; /* Similar font size to service text */
+  line-height: 1.8;
+  color: #555; /* Soft text color */
+  margin-bottom: 20px;
+}
+
+.home-content strong {
+  font-weight: bold; /* Bold for emphasis */
+}
+
+.button-group {
+  margin-top: 30px; /* Space between content and buttons */
+}
+
+.button {
+  display: inline-block;
+  margin: 10px;
+  padding: 12px 25px;
+  background-color: #007BFF; /* Matching button color */
+  color: white;
+  border-radius: 8px; /* Rounded button corners */
+  text-decoration: none;
+  font-weight: 600; /* Bold font for buttons */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.button:hover {
+  background-color: #c5dcf4; /* Darker blue on hover */
+  transform: translateY(-2px); /* Slight lift on hover */
+}
+
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  .home-content {
+    padding: 20px;
+  }
+
+  .home-content h2 {
+    font-size: 2rem;
+  }
+
+  .button {
+    font-size: 1rem;
+  }
+}
+
+/* Projects Section Styling */
+#projects {
+  padding: 80px 20px;
+  background-color: white; /* Light background for contrast */
+}
+
+.projects-content {
+  max-width: 1100px; /* Max width for content */
+  margin: 0 auto; /* Center align */
+  text-align: center; /* Center text */
+}
+
+.projects-content h2 {
+  font-size: 2.8rem; /* Large heading size */
+  margin-bottom: 40px; /* Space below the heading */
+  color: #333; /* Darker color for headings */
+}
+
+.project {
+  background-color: #ffffff; /* White background for each project */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  margin: 20px 0; /* Space between projects */
+  padding: 20px; /* Padding inside each project */
+  transition: transform 0.3s, box-shadow 0.3s; /* Smooth transitions */
+}
+
+.project:hover {
+  transform: translateY(-8px);
+box-shadow: 0 6px 25px rgba(0, 0, 0, 0.12);
+}
+
+.project img {
+  width: 100%; /* Responsive image width */
+  max-height: 300px; /* Limit height for uniformity */
+  max-width: 600px;
+  object-fit: cover; /* Maintain aspect ratio */
+  border-radius: 10px 10px 0 0; /* Rounded top corners */
+}
+
+.project h3 {
+  font-size: 1.8rem; /* Heading size for project titles */
+  margin: 15px 0; /* Space above and below titles */
+  color: #125cac; /* Blue color for project titles */
+}
+
+.project p {
+  font-size: 1.1rem; /* Font size for project descriptions */
+  line-height: 1.6; /* Improved line height for readability */
+  color: #555; /* Darker gray for text */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .projects-content h2 {
+    font-size: 2.4rem; /* Smaller heading for mobile */
+  }
+
+  .project h3 {
+    font-size: 1.6rem; /* Smaller title for mobile */
+  }
+
+  .project img {
+    max-height: 200px; /* Adjust image height for mobile */
+  }
+}
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+  padding: 20px;
+}
+
+/* Section styling */
+#contact {
+  width: 1100px;
+  padding: 40px 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: #4CAF50; /* Green accent color */
+}
+
+/* Contact Section Styling */
+#contact {
+  max-width: 1100px; /* Set max width */
+  margin: 0 auto; /* Center the contact section */
+  padding: 60px 20px; /* Add padding */
+  background-color: #ffffff; /* White background */
+  border-radius: 15px; /* Smooth corners */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2.5rem;
+  color: #333;
+  font-weight: 700;
+}
+
+/* Contact Info Styling */
+.contact-info {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.contact-info p {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+/* Form Styling */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 50%;
+  max-width: 1100px; /* Max width for form */
+  margin: 0 auto; /* Center the form */
+  border:#1a1a1a;
+}
+
+label {
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+input, textarea {
+  padding: 15px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  width: 100%;
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus, textarea:focus {
+  border-color: #4CAF50;
+  box-shadow: 0 0 8px rgba(76, 175, 80, 0.2);
+}
+
+textarea {
+  height: 180px;
+  resize: vertical;
+}
+
+/* Button Styling */
+button {
+  padding: 15px;
+  font-size: 1.2rem;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+  background-color: #45a049;
+  transform: translateY(-2px);
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  #contact {
+    padding: 50px 15px; /* Reduce padding for smaller screens */
+  }
+
+  h2 {
+    font-size: 2rem; /* Adjust font size for smaller screens */
+  }
+
+  form {
+    max-width: 100%; /* Make form width 100% for smaller screens */
+    padding: 0 10px; /* Add padding to form */
+  }
+
+  input, textarea {
+    font-size: 0.9rem;
+    padding: 12px;
+  }
+
+  button {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h2 {
+    font-size: 1.75rem; /* Smaller heading size on very small screens */
+  }
+
+  form {
+    padding: 0 5px; /* Narrow padding on very small screens */
+  }
+
+  input, textarea {
+    font-size: 0.85rem; /* Reduce font size slightly for inputs */
+    padding: 10px;
+  }
+
+  button {
+    padding: 12px;
+    font-size: 1rem; /* Adjust button size */
+  }
+  .navbar {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar img {
+    margin-right: 20px;
+  }
+  
+}
+/* Styles for the navigation bar */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #f8f9fa;
+}
+
+/* Styles for the logo */
+.navbar img {
+  margin-right: 20px; /* Space between the logo and navigation links */
+  border-radius: 50%; /* Optional: makes the logo circular */
+}
+
+/* Styles for the navigation links */
+.navbar nav {
+  margin-left: 15px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #fffdfd;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.navbar a:hover {
+  color: #0b4481; /* Change link color on hover */
+}
+
+
+
